@@ -12,6 +12,7 @@ export class MessagesManagerController {
         res.json('Messages Manager Module');
     }
 
+    //TODO: Agregar DTO
     public send = async(req: Request, res: Response) => {
         const { type, payload } = req.body;
         this.messagesManagerService.sendMessage(type, payload);
