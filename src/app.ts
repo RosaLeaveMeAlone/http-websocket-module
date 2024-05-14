@@ -1,7 +1,15 @@
+import { envs } from "./config/envs";
+import { AppRoutes } from './presentation/routes';
+import { Server } from "./presentation/server";
 
+(async ()=> {
+    main();
+})();
 
-interface hola {
-    nombre: string;
+function main() {
+    const server = new Server({
+        port: envs.PORT,
+        routes: AppRoutes.routes,
+    });
+    server.start();
 }
-
-console.log('Hola mundo');
