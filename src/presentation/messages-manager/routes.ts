@@ -13,6 +13,7 @@ export class MessagesManagerRoutes {
 
         router.get('/', messagesManagerController.home );
         router.post('/send', messagesManagerController.send );
+        router.post('/sendToChannel', messagesManagerController.sendToChannel );
 
         return router;
     }

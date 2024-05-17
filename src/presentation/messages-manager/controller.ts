@@ -19,5 +19,12 @@ export class MessagesManagerController {
         res.json({ type, payload });
     }
 
+    public sendToChannel = async(req: Request, res: Response) => {
+        const { type, channel, payload } = req.body;
+        this.messagesManagerService.sendMessageToChannel(channel, type, payload);
+        res.json({ type, channel, payload });
+
+    }
+
 
 }

@@ -1,5 +1,5 @@
 import { createServer } from "http";
-import { envs } from "./config/envs";
+import { envs } from "./config";
 import { AppRoutes } from './presentation/routes';
 import { Server } from "./presentation/server";
 import { WssService } from "./presentation/services/wss.service";
